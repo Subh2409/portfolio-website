@@ -4,8 +4,8 @@ import { Trophy, GraduationCap, Code, Target } from "lucide-react";
 
 export function AboutSection() {
   const achievements = [
-    { platform: "Codeforces", status: "Specialist", rating: "Max Rating: 1516" },
-    { platform: "CodeChef", status: "3★", rating: "Max Rating: 1735" },
+    { platform: "Codeforces", status: "Specialist", rating: "Max Rating: 1516", url: "https://codeforces.com/profile/Light_" },
+    { platform: "CodeChef", status: "3★", rating: "Max Rating: 1735", url: "https://www.codechef.com/users/subham_2401" },
     { platform: "Facebook Hacker Cup 2022", status: "World Rank 2284 (Round 1), 2921 (Round 2)" },
     { platform: "Innovative India Coding Championship", status: "Qualified for Round 3 among 4000+ participants" },
     { platform: "CodeRush Challenge @ IET Lucknow", status: "Top 43 rank" },
@@ -70,19 +70,30 @@ export function AboutSection() {
                 
                 <div className="space-y-6">
                   {achievements.map((achievement, index) => (
-                    <div 
-                      key={index}
-                      className="flex items-start space-x-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary/70 transition-colors duration-300"
-                    >
-                      <Target className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold text-foreground">{achievement.platform}</h4>
-                        <p className="text-sm text-muted-foreground">{achievement.status}</p>
-                        {achievement.rating && (
-                          <p className="text-xs text-primary font-mono">{achievement.rating}</p>
-                        )}
-                      </div>
-                    </div>
+                     <div 
+                       key={index}
+                       className="flex items-start space-x-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary/70 transition-colors duration-300"
+                     >
+                       <Target className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                       <div>
+                         {achievement.url ? (
+                           <a 
+                             href={achievement.url}
+                             target="_blank"
+                             rel="noopener noreferrer"
+                             className="font-semibold text-foreground hover:text-primary transition-colors duration-200"
+                           >
+                             {achievement.platform}
+                           </a>
+                         ) : (
+                           <h4 className="font-semibold text-foreground">{achievement.platform}</h4>
+                         )}
+                         <p className="text-sm text-muted-foreground">{achievement.status}</p>
+                         {achievement.rating && (
+                           <p className="text-xs text-primary font-mono">{achievement.rating}</p>
+                         )}
+                       </div>
+                     </div>
                   ))}
                 </div>
               </CardContent>

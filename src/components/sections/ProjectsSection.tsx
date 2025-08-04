@@ -18,8 +18,8 @@ export function ProjectsSection() {
         "Contact & Help Pages",
         "Responsive Design"
       ],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/subham24092001/EcommerceMERN",
+      liveUrl: "https://65faa402f697514481a023b2--admirable-platypus-d57ee8.netlify.app/",
       icon: ShoppingCart
     }
   ];

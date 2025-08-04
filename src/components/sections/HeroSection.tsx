@@ -76,21 +76,20 @@ export function HeroSection() {
             and contributing to Agile teams at leading tech companies.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex justify-center mb-12">
             <Button 
               size="lg" 
               className="bg-gradient-primary hover:shadow-electric transition-all duration-300 font-mono font-semibold"
+              asChild
             >
-              <Download className="mr-2 h-5 w-5" />
-              View Resume
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary/50 hover:border-primary hover:bg-primary/10 transition-all duration-300 font-mono font-semibold"
-            >
-              <Mail className="mr-2 h-5 w-5" />
-              Contact Me
+              <a 
+                href="https://drive.google.com/file/d/1kIZ1sp-ScFcIu5a5Q2LzJJdovYYGWFZm/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                View Resume
+              </a>
             </Button>
           </div>
           
